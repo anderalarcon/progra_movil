@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/uno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Enviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etePassword"
+        app:layout_constraintTop_toBottomOf="@+id/etePassword" />
+
+    <TextView
+        android:id="@+id/tviTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/eteUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Ingrese Usuario"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tviUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/tviUsuario" />
+
+    <EditText
+        android:id="@+id/etePassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Ingrese Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tviPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tviPassword" />
+
+    <TextView
+        android:id="@+id/tviPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/eteUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/eteUsuario" />
+
+    <TextView
+        android:id="@+id/tviUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Usuario"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/uno"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tviTitulo"
+        app:srcCompat="@drawable/ulima" />
+
+
+    <!--
+
+        Posicionamiento relativo a hermanos :
+
+        -layout to right off , to left off
+        -layout below , layout above
+        -layout align top , layout align bottom
+        -layout align left , layout align right
+
+        Posicionamiento relativo a padre :
+        -layout center vertical , center horizontal
+        -align parent left , right
+        -align parent top , bottom
+        -center in parent ambos ejes
+    -->
+
+
+    <!--  <Button
+          android:id="@+id/uno"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:text="Boton1" />
+      <Button
+          android:id="@+id/dos"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@id/uno"
+          android:layout_toRightOf="@id/uno"
+          android:text="Boton2" />
+      <Button
+          android:id="@+id/tres"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/dos"
+          android:layout_alignLeft="@id/dos"
+          android:text="Boton3" />
+
+
+      &lt;!&ndash;
+          eje superior si alinea con but3
+          eje horizontal se alinea con 3
+      &ndash;&gt;
+      <Button
+          android:id="@+id/cuatro"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@id/tres"
+          android:layout_toLeftOf="@id/tres"
+          android:text="Boton4" />-->
+
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         android:gravity="center"
+
+         android:orientation="horizontal">
+
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginRight="10dp"
+
+             android:text="Boton1" />
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+
+             android:text="Boton2" />
+
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         android:orientation="horizontal">
+
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+
+             android:layout_weight="1"
+             android:text="Boton1" />
+
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:text="Boton2" />
+
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:text="Boton3" />
+     </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         android:orientation="horizontal">
+
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+
+             android:layout_weight="1"
+             android:text="Boton1" />
+
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="Boton2" />
+
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="Boton3" />
+     </LinearLayout>-->
+
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:scaleType="centerCrop"-->
+    <!--        android:src="@drawable/ulima" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+
+    <!--        android:text="Button" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
